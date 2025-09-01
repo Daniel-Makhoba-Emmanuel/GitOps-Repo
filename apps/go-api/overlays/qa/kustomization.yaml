@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base # Point to the base directory
+
+namespace: qa
+
+labels:
+  - pairs:
+      app: backend
+      environment: qa
+
+nameSuffix: -qa
+
+helmCharts:
+    - name: go-api-chart
+      repo: ""
+      version: "0.1.0"
+      valuesFile: values.yaml
+
