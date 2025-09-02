@@ -1,17 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev
+  name: go-api
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
+    repoURL: 'https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git'
     targetRevision: HEAD
-    path: environments/dev
+    path: apps/go-api-chart
+    helm:
+      valueFiles:
+        - ../../environments/dev/values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: dev
   syncPolicy:
     automated:
       prune: true

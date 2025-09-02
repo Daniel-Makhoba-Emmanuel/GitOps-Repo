@@ -1,1 +1,10 @@
-replicaCount:2
+replicaCount: 2
+
+image:
+  repository: iamdanielemmanuel22643/kustomize-backend
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
