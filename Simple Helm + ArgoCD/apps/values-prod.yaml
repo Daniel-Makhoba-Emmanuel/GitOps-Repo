@@ -1,0 +1,5 @@
+go-api:
+  image:
+    repository: iamdanielemmanuel22643/kustomize-backend
+    tag: latest
+  replicas: 3

@@ -1,0 +1,5 @@
+go-api-chart:
+  image:
+    repository: iamdanielemmanuel22643/kustomize-backend
+    tag: latest
+  replicas: 2
