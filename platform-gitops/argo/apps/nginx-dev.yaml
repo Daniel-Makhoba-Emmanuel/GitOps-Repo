@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
-    path: charts/nginx
+    path: platform-gitops/apps/nginx/chart
     targetRevision: 'main'
     helm:
       valueFiles:
-        - ../../envs/dev/values.yaml
+        - ../../apps/nginx/values/dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
