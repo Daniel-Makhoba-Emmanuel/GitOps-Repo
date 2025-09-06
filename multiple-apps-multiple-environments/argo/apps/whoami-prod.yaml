@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
-    path: pmultiple-apps-mulitple-environments/apps/whoami/chart
+    path: multiple-apps-multiple-environments/apps/whoami/chart
     targetRevision: 'main'
     helm:
       valueFiles:
