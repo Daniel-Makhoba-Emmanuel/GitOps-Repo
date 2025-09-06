@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
-    path: platform-gitops/apps/echo/chart
+    path: multiple-apps-mulitple-environments/apps/echo/chart
     targetRevision: 'main'
     helm:
       valueFiles:

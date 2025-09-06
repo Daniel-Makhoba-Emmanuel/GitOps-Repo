@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
-    path: platform-gitops/argo/apps
+    path: multiple-apps-mulitple-environments/argo/apps
     targetRevision: 'main'
   destination:
     server: https://kubernetes.default.svc

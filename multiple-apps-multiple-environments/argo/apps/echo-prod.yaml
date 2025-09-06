@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-stage
+  name: echo-prod
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,14 +9,14 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Makhoba-Emmanuel/GitOps-Repo.git
-    path: platform-gitops/apps/nginx/chart
+    path: multiple-apps-mulitple-environments/apps/echo/chart
     targetRevision: 'main'
     helm:
       valueFiles:
-        - ../values/stage.yaml
+        - ../values/prod.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: stage
+    namespace: prod
   syncPolicy:
     automated:
       prune: true
